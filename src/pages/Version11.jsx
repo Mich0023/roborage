@@ -325,7 +325,7 @@ function Version11() {
                     whileTap={{ scale: 0.95 }}
                     className="inline-block relative group overflow-hidden px-10 py-4 bg-vibrantPurple/20 text-white font-road-rage text-2xl tracking-widest shadow-[0_0_20px_rgba(150,0,255,0.3)] hover:shadow-[0_0_40px_rgba(150,0,255,0.8)] border-2 border-vibrantPurple transition-all duration-300 backdrop-blur-sm w-full md:w-auto text-center"
                 >
-                    <span className="relative z-10 group-hover:text-black transition-colors duration-300 drop-shadow-md">REGISTRO: MUY PRONTO</span>
+                    <span className="relative z-10 group-hover:text-white transition-colors duration-300 drop-shadow-md">REGISTRO: MUY PRONTO</span>
                     <div className="absolute inset-0 bg-vibrantPurple transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
                 </motion.a>
 
