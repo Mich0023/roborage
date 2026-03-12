@@ -57,11 +57,18 @@ function Home() {
                     borderBottom: useTransform(navBorderOpacity, v => `1px solid rgba(204, 255, 0, ${v})`)
                 }}
             >
+                {/* Logo parte superior izquierda */}
                 <div className="flex items-center gap-3">
                     <Link to="/">
-                        <img src="/images/img5.png" alt="ROBORAGE" className="h-8 md:h-10 w-auto object-contain cursor-pointer" />
+                        <img 
+                            src="/images/Roboragepal.png" 
+                            alt="ROBORAGE" 
+                            className="h-16 md:h-20 w-auto object-contain cursor-pointer
+                            transition-transform duration-300 hover:scale-110" 
+                        />
                     </Link>
                 </div>
+
                 <div className="hidden md:flex items-center gap-6 text-sm font-semibold tracking-wider text-gray-300">
                     <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-neonGreen transition-colors cursor-pointer">ACERCA DE</a>
                     <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')} className="hover:text-neonGreen transition-colors cursor-pointer">PREGUNTAS</a>
@@ -133,10 +140,18 @@ function Home() {
                             href="#"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="inline-block relative group overflow-hidden px-10 py-4 bg-vibrantPurple/20 text-white font-road-rage text-2xl tracking-widest shadow-[0_0_20px_rgba(150,0,255,0.3)] hover:shadow-[0_0_40px_rgba(150,0,255,0.8)] border-2 border-vibrantPurple transition-all duration-300 backdrop-blur-sm w-full md:w-auto text-center"
+                            className="inline-block relative group overflow-hidden px-10 py-4 
+                            bg-black text-neonGreen font-road-rage text-2xl tracking-widest 
+                            shadow-[0_0_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_rgba(0,0,0,0.6)] 
+                            border-2 border-black transition-all duration-300 backdrop-blur-sm 
+                            w-full md:w-auto text-center"
                         >
-                            <span className="relative z-10 group-hover:text-white transition-colors duration-300 drop-shadow-md">MUY PRONTO...</span>
-                            <div className="absolute inset-0 bg-vibrantPurple transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+                            <span className="relative z-10 group-hover:text-black transition-colors duration-300 drop-shadow-md">
+                                MUY PRONTO...
+                            </span>
+
+                            <div className="absolute inset-0 bg-neonGreen transform scale-x-0 
+                            group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
                         </motion.a>
                     </div>
                 </div>
