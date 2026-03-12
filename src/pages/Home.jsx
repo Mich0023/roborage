@@ -74,7 +74,6 @@ function Home() {
                     <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-neonGreen transition-colors cursor-pointer">ACERCA DE</a>
                     <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')} className="hover:text-neonGreen transition-colors cursor-pointer">PREGUNTAS</a>
                     <Link to="/version-1.1" className="hover:text-neonGreen transition-colors cursor-pointer">VERSIÓN 1.1</Link>
-                    <a href="#" className="bg-neonGreen text-black px-4 py-1 font-bold rounded-sm hover:brightness-110 transition-all cursor-not-allowed">REGISTRO</a>
                 </div>
             </motion.nav>
 
@@ -83,8 +82,38 @@ function Home() {
                 <img src="/images/img5.png" alt="Wolf Logo" className="w-40 md:w-56 h-auto object-contain mb-10 drop-shadow-[0_0_15px_rgba(204,255,0,0.4)]" />
                 <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-8 tracking-widest">¿Qué es ROBORAGE?</h2>
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed font-mono tracking-wide">
-                    RoboRage es un concurso de robótica organizado por la División de Robótica del capítulo estudiantil <span className="text-neonGreen font-bold">AAAIMX</span>, diseñado para impulsar el talento, la innovación y la competencia tecnológica entre estudiantes universitarios y de medio superior.
+                    RoboRage es un concurso de robótica organizado por la División de Robótica del capítulo estudiantil <span className="text-neonGreen font-bold">AAAIMX</span>, es un evento enfocado en enfrentamientos y combates controlados entre robots, dirigido a estudiantes de nivel superior y medio superior.
                 </p>
+            </section>
+
+            {/* Siguiente Edición */}
+            <section className="py-20 px-6 max-w-4xl mx-auto text-center">
+
+                <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-6 tracking-widest">
+                    SIGUIENTE EDICIÓN
+                </h2>
+
+                <p className="text-gray-300 font-mono text-sm md:text-base leading-relaxed mb-10">
+                    La siguiente edición, la <span className="text-neonGreen font-bold">versión 1.1</span>, 
+                    se llevará a cabo en el 
+                    <span className="text-neonGreen font-bold"> Instituto Tecnológico de Mérida, Campus Poniente</span>, 
+                    el día <span className="text-neonGreen font-bold">29 de abril de 2026</span>.
+                </p>
+
+                <Link to="/version-1.1">
+                    <motion.a
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-block relative group overflow-hidden px-10 py-4 bg-neonGreen/10 text-neonGreen font-road-rage text-2xl tracking-widest shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_40px_rgba(204,255,0,0.8)] border-2 border-neonGreen transition-all duration-300 backdrop-blur-sm w-full md:w-auto text-center"
+                    >
+                        <span className="relative z-10 group-hover:text-black transition-colors duration-300 drop-shadow-md">
+                            IR A VERSIÓN 1.1
+                        </span>
+
+                        <div className="absolute inset-0 bg-neonGreen transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+                    </motion.a>
+                </Link>
+
             </section>
 
             {/* Last versions (Carousel) */}

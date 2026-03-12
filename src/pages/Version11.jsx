@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import PartnersLogos from '../components/PartnersLogos';
 
 const EVENT_DATE = new Date('2026-04-29T00:00:00');
 
@@ -80,7 +81,12 @@ function Version11() {
             >
                 <div className="flex items-center gap-3">
                     <Link to="/">
-                        <img src="/images/img5.png" alt="ROBORAGE" className="h-8 md:h-10 w-auto object-contain cursor-pointer" />
+                        <img 
+                        src="/images/Roboragepal.png" 
+                        alt="ROBORAGE" 
+                        className="h-16 md:h-20 w-auto object-contain cursor-pointer
+                        transition-transform duration-300 hover:scale-110" 
+                        />
                     </Link>
                 </div>
                 <div className="hidden md:flex items-center gap-6 text-sm font-semibold tracking-wider text-gray-300">
@@ -146,13 +152,36 @@ function Version11() {
                 transition={{ duration: 0.8 }}
                 className="py-20 px-6 max-w-4xl mx-auto relative z-10 text-center"
             >
-                <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-8 tracking-widest">SOBRE ESTA EDICIÓN</h2>
+                <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-8 tracking-widest">
+                    SOBRE ESTA EDICIÓN
+                </h2>
+
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed font-mono tracking-wide mb-6">
+                    La versión v1.1 se llevará a cabo en el Instituto Tecnológico de Mérida, Campus Poniente, el 29 de abril de 2026. <br /><br />
                     Para esta versión presentamos nuevas modalidades dentro de las categorías RC, incluyendo Minisumo Máster y Batallas de Robots de 12 libras, ampliando las oportunidades de participación y elevando el nivel de desafío dentro del evento.
                 </p>
-                <p className="text-base md:text-lg text-neonGreen font-bold font-mono tracking-wide">
+
+                <p className="text-base md:text-lg text-neonGreen font-bold font-mono tracking-wide mb-12">
                     ¡Te esperamos para ser parte del inicio de RoboRage!
                 </p>
+
+                {/* Logos institucionales */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 opacity-80">
+
+                    <img
+                        src="/images/Logo_TecNM.png"
+                        alt="Tecnológico Nacional de México"
+                        className="h-20 md:h-24 object-contain filter brightness-0 invert transition-opacity duration-300 hover:opacity-100"
+                    />
+
+                    <img
+                        src="/images/ITMBlanco.png"
+                        alt="Instituto Tecnológico de Mérida"
+                        className="h-24 md:h-28 object-contain"
+                    />
+
+                </div>
+
             </motion.section>
 
             {/* Location */}
@@ -173,7 +202,7 @@ function Version11() {
                 </div>
                 <div className="w-full text-left">
                     <h2 className="text-2xl md:text-3xl font-road-rage text-neonGreen mb-6 tracking-widest">LUGAR</h2>
-                    <p className="text-center font-mono text-gray-400 mb-8 text-sm tracking-widest">en:</p>
+                    <p className="text-m font-bold text-white text-center mb-8 tracking-widest">Biblioteca del Campus Poniente del Instituto Tecnológico de Mérida</p>
 
                     <div className="relative w-full max-w-2xl mx-auto">
                         <div className="absolute -inset-4 bg-white/10 filter blur-2xl rounded-full z-0 pointer-events-none"></div>
@@ -342,19 +371,7 @@ function Version11() {
 
             {/* Footer */}
             <footer className="border-t border-vibrantPurple/30 bg-black pt-16 pb-12 px-6 text-center relative z-10">
-                <div className="max-w-4xl mx-auto flex flex-col items-center">
-                    <div className="flex justify-center flex-wrap items-center gap-12 opacity-80 pt-4 w-full">
-                        <div className="flex flex-col items-center group cursor-pointer">
-                            <img src="/images/img4.png" alt="ACM Logo" className="h-10 w-auto object-contain transition-opacity duration-300 hover:brightness-125" />
-                        </div>
-                        <div className="flex flex-col items-center group cursor-pointer">
-                            <img src="/images/img2.png" alt="Dragon Icon" className="h-12 w-auto object-contain transition-opacity duration-300 grayscale hover:grayscale-0 hover:brightness-125 saturate-200" style={{ filter: 'drop-shadow(0px 0px 5px rgba(255,255,255,0.2)) grayscale(100%) brightness(150%)' }} />
-                        </div>
-                        <div className="flex flex-col items-center group cursor-pointer">
-                            <img src="/images/img3.png" alt="AAAIMX Logo" className="h-12 w-auto object-contain transition-opacity duration-300 hover:brightness-125" />
-                        </div>
-                    </div>
-                </div>
+                <PartnersLogos />
             </footer>
         </div>
     );
