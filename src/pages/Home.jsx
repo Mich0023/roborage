@@ -93,7 +93,7 @@ function Home() {
                 <img src="/images/img5.png" alt="Wolf Logo" className="w-40 md:w-56 h-auto object-contain mb-10 drop-shadow-[0_0_15px_rgba(204,255,0,0.4)]" />
                 <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-8 tracking-widest">¿Qué es ROBORAGE?</h2>
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed font-mono tracking-wide">
-                    RoboRage es un concurso de robótica organizado por la División de Robótica del capítulo estudiantil <span className="text-neonGreen font-bold">AAAIMX</span>, es un evento enfocado en enfrentamientos y combates controlados entre robots, dirigido a estudiantes de nivel superior y medio superior.
+                    RoboRage es un evento enfocado en enfrentamientos y combates controlados entre robots, dirigido a estudiantes de nivel superior y medio superior.
                 </p>
             </section>
 

@@ -153,6 +153,14 @@ function Version11() {
                 </motion.div>
             </section>
 
+            {/* Hero / About */}
+            <section id="about" className="pt-32 pb-16 px-6 max-w-4xl mx-auto relative z-10 flex flex-col items-center text-center">
+                <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-8 tracking-widest">¿Qué es ROBORAGE?</h2>
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed font-mono tracking-wide">
+                    RoboRage es un evento enfocado en enfrentamientos y combates controlados entre robots, dirigido a estudiantes de nivel superior y medio superior.
+                </p>
+            </section>
+
             {/* Sobre esta edición */}
             <motion.section
                 id="edition"
