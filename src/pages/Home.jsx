@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SocialLinks from '../components/SocialLinks';
+import ImageCarousel from "../components/ImageCarousel";
 
 const carouselImages = [
     'IMG_3522.JPG',
@@ -101,7 +102,7 @@ function Home() {
                 </p>
 
                 <Link to="/version-1.1">
-                    <motion.a
+                    <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="inline-block relative group overflow-hidden px-10 py-4 bg-neonGreen/10 text-neonGreen font-road-rage text-2xl tracking-widest shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_40px_rgba(204,255,0,0.8)] border-2 border-neonGreen transition-all duration-300 backdrop-blur-sm w-full md:w-auto text-center"
@@ -111,29 +112,18 @@ function Home() {
                         </span>
 
                         <div className="absolute inset-0 bg-neonGreen transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
-                    </motion.a>
+                    </motion.div>
                 </Link>
 
             </section>
 
-            {/* Last versions (Carousel) */}
+            {/* Last versions */}
             <section className="py-12 px-6 w-full relative z-10 text-center overflow-hidden">
-                <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-10 tracking-widest">Last versions</h2>
-                <div
-                    ref={carouselRef}
-                    className="flex gap-6 overflow-x-auto pb-8 justify-start px-4 md:px-20 scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-                >
-                    {carouselImages.map((imgName, index) => (
-                        <div key={index} className="min-w-[80vw] md:min-w-[400px] h-[250px] md:h-[300px] bg-white/5 border border-neonGreen/30 rounded-lg flex items-center justify-center snap-center flex-shrink-0 relative overflow-hidden group">
-                            <img
-                                src={`/images/carousel/${imgName}`}
-                                alt={`Versión anterior ${index + 1}`}
-                                className="w-full h-full object-cover z-10 transition-transform duration-500 group-hover:scale-105"
-                                onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = '<span class="text-neonGreen font-mono text-sm px-4">Imagen no encontrada: ' + imgName + '</span>'; }}
-                            />
-                        </div>
-                    ))}
-                </div>
+            <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-10 tracking-widest">
+                Last versions
+            </h2>
+
+            <ImageCarousel images={carouselImages} />
             </section>
 
             {/* Categorías con Fondo Verde */}
@@ -248,7 +238,7 @@ function Home() {
                             <img src="/images/img4.png" alt="ACM Logo" className="h-10 w-auto object-contain transition-opacity duration-300 hover:brightness-125" />
                         </div>
                         <div className="flex flex-col items-center group cursor-pointer">
-                            <img src="/images/img2.png" alt="Dragon Icon" className="h-12 w-auto object-contain transition-opacity duration-300 grayscale hover:grayscale-0 hover:brightness-125 saturate-200" style={{ filter: 'drop-shadow(0px 0px 5px rgba(255,255,255,0.2)) grayscale(100%) brightness(150%)' }} />
+                            <img src="/images/Division_Logo.png" alt="Dragon Icon" className="h-12 w-auto object-contain transition-opacity duration-300 grayscale hover:grayscale-0 hover:brightness-125 saturate-200" style={{ filter: 'drop-shadow(0px 0px 5px rgba(255,255,255,0.2)) grayscale(100%) brightness(150%)' }} />
                         </div>
                         <div className="flex flex-col items-center group cursor-pointer">
                             <img src="/images/img3.png" alt="AAAIMX Logo" className="h-12 w-auto object-contain transition-opacity duration-300 hover:brightness-125" />
