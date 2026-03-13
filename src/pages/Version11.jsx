@@ -216,6 +216,7 @@ function Version11() {
                     <div className="text-center font-mono">
                         <p className="text-gray-400 mb-4 text-sm tracking-widest">RoboRage v.1.1 te espera el:</p>
                         <p className="text-3xl md:text-4xl font-bold text-neonGreen tracking-widest">29 DE ABRIL DE 2026</p>
+                        <p className="text-lg md:text-xl font-bold text-white tracking-widest mt-2">8:00 AM - 8:00 PM</p>
                     </div>
                 </div>
                 <div className="w-full text-left">
