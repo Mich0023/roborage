@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PartnersLogos from '../components/PartnersLogos';
+import Navbar from '../components/Navbar';
 
 const EVENT_DATE = new Date('2026-04-29T00:00:00');
 
@@ -54,6 +55,13 @@ function Version11() {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     };
+    
+    const versionLinks = [
+        { label: "EDICIÓN", type: "scroll", target: "edition" },
+        { label: "CATEGORÍAS", type: "scroll", target: "categories" },
+        { label: "REGLAMENTO", type: "scroll", target: "rules" },
+        { label: "REGISTRO", type: "button" }
+    ];
 
     return (
         <div className="min-h-screen text-white font-sans selection:bg-neonGreen selection:text-black bg-black">
@@ -89,13 +97,15 @@ function Version11() {
                         />
                     </Link>
                 </div>
-                <div className="hidden md:flex items-center gap-6 text-sm font-semibold tracking-wider text-gray-300">
-                    <a href="#edition" onClick={(e) => scrollToSection(e, 'edition')} className="hover:text-neonGreen transition-colors cursor-pointer">EDICIÓN</a>
-                    <a href="#categories" onClick={(e) => scrollToSection(e, 'categories')} className="hover:text-neonGreen transition-colors cursor-pointer">CATEGORÍAS</a>
-                    <a href="#rules" onClick={(e) => scrollToSection(e, 'rules')} className="hover:text-neonGreen transition-colors cursor-pointer">REGLAMENTO</a>
-                    <a href="#" className="bg-neonGreen text-black px-4 py-1 font-bold rounded-sm hover:brightness-110 transition-all cursor-not-allowed">REGISTRO</a>
-                </div>
             </motion.nav>
+
+            <Navbar
+                    links={versionLinks}
+                    scrollToSection={scrollToSection}
+                    navBgOpacity={useTransform(navBgOpacity, v => `rgba(0,0,0,${v})`)}
+                    navBackdropBlur={navBackdropBlur}
+                    navBorderOpacity={useTransform(navBorderOpacity, v => `1px solid rgba(204,255,0,${v})`)}
+            />
 
             {/* Hero */}
             <section className="pt-32 pb-20 px-4 min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
@@ -150,7 +160,7 @@ function Version11() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className="py-20 px-6 max-w-4xl mx-auto relative z-10 text-center"
+                className="scroll-mt-24 py-20 px-6 max-w-4xl mx-auto relative z-10 text-center"
             >
                 <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-8 tracking-widest">
                     SOBRE ESTA EDICIÓN
@@ -219,7 +229,7 @@ function Version11() {
             </motion.section>
 
             {/* Categories Section */}
-            <section id="categories" className="py-20 px-6 max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+            <section id="categories" className="scroll-mt-24 py-20 px-6 max-w-5xl mx-auto relative z-10 flex flex-col items-center">
                 <motion.h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-16">CATEGORÍAS</motion.h2>
 
                 <div className="w-full mb-16">
@@ -347,7 +357,7 @@ function Version11() {
             </section>
 
             {/* Reglas y Registro Section */}
-            <section id="rules" className="py-20 px-6 max-w-4xl mx-auto z-10 relative flex flex-col md:flex-row items-center justify-center gap-8">
+            <section id="rules" className="scroll-mt-24 py-20 px-6 max-w-4xl mx-auto z-10 relative flex flex-col md:flex-row items-center justify-center gap-8">
                 <motion.a
                     href="#"
                     whileHover={{ scale: 1.05 }}

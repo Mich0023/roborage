@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SocialLinks from '../components/SocialLinks';
 import ImageCarousel from "../components/ImageCarousel";
+import Navbar from "../components/Navbar";
 
 const carouselImages = [
     'IMG_3522.JPG',
@@ -22,6 +23,13 @@ function Home() {
     const navBgOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 0.8]);
     const navBackdropBlur = useTransform(scrollYProgress, [0, 0.05], ['blur(0px)', 'blur(12px)']);
     const navBorderOpacity = useTransform(scrollYProgress, [0, 0.05], [0, 0.3]);
+
+    const homeLinks = [
+        { label: "ACERCA DE", type: "scroll", target: "about" },
+        { label: "PRÓXIMA EDICIÓN", type: "scroll", target: "siguiente_edicion" },
+        { label: "PREGUNTAS", type: "scroll", target: "faq" },
+        { label: "VERSIÓN 1.1", type: "route", to: "/version-1.1" }
+    ];
 
     const scrollToSection = (e, sectionId) => {
         e.preventDefault();
@@ -70,13 +78,15 @@ function Home() {
                         />
                     </Link>
                 </div>
-
-                <div className="hidden md:flex items-center gap-6 text-sm font-semibold tracking-wider text-gray-300">
-                    <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-neonGreen transition-colors cursor-pointer">ACERCA DE</a>
-                    <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')} className="hover:text-neonGreen transition-colors cursor-pointer">PREGUNTAS</a>
-                    <Link to="/version-1.1" className="hover:text-neonGreen transition-colors cursor-pointer">VERSIÓN 1.1</Link>
-                </div>
             </motion.nav>
+            
+                <Navbar
+                    links={homeLinks}
+                    scrollToSection={scrollToSection}
+                    navBgOpacity={useTransform(navBgOpacity, v => `rgba(0,0,0,${v})`)}
+                    navBackdropBlur={navBackdropBlur}
+                    navBorderOpacity={useTransform(navBorderOpacity, v => `1px solid rgba(204,255,0,${v})`)}
+                />
 
             {/* Hero / About */}
             <section id="about" className="pt-32 pb-16 px-6 max-w-4xl mx-auto relative z-10 flex flex-col items-center text-center">
@@ -88,7 +98,7 @@ function Home() {
             </section>
 
             {/* Siguiente Edición */}
-            <section className="py-20 px-6 max-w-4xl mx-auto text-center">
+            <section id='siguiente_edicion' className="scroll-mt-24 py-20 px-6 max-w-4xl mx-auto text-center">
 
                 <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-6 tracking-widest">
                     SIGUIENTE EDICIÓN
@@ -195,7 +205,7 @@ function Home() {
             </section>
 
             {/* Preguntas Frecuentes */}
-            <section id="faq" className="py-20 px-6 max-w-4xl mx-auto relative z-10">
+            <section id="faq" className="scroll-mt-24 py-20 px-6 max-w-4xl mx-auto relative z-10">
                 <h2 className="text-3xl md:text-4xl font-road-rage text-neonGreen mb-12 tracking-widest text-center">Preguntas Frecuentes</h2>
 
                 <div className="space-y-6">
