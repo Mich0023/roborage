@@ -105,7 +105,7 @@ function Home() {
                 </h2>
 
                 <p className="text-gray-300 font-mono text-sm md:text-base leading-relaxed mb-10">
-                    La siguiente edición, la <span className="text-neonGreen font-bold">versión 1.1</span>, 
+                    La siguiente edición, la <span className="text-neonGreen font-bold">v.1.1</span>, 
                     se llevará a cabo en el 
                     <span className="text-neonGreen font-bold"> Instituto Tecnológico de Mérida, Campus Poniente</span>, 
                     el día <span className="text-neonGreen font-bold">29 de abril de 2026</span>.

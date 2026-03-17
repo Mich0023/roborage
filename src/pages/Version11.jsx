@@ -192,7 +192,7 @@ function Version11() {
                 </h2>
 
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed font-mono tracking-wide mb-6">
-                    La versión v1.1 se llevará a cabo en el Instituto Tecnológico de Mérida, Campus Poniente, el 29 de abril de 2026. <br /><br />
+                    La versión v.1.1 se llevará a cabo en el Instituto Tecnológico de Mérida, Campus Poniente, el 29 de abril de 2026. <br /><br />
                     Para esta versión presentamos nuevas modalidades dentro de las categorías RC, incluyendo Minisumo Máster y Batallas de Robots de 12 libras, ampliando las oportunidades de participación y elevando el nivel de desafío dentro del evento.
                 </p>
 
