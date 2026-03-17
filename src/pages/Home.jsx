@@ -28,7 +28,7 @@ function Home() {
         { label: "ACERCA DE", type: "scroll", target: "about" },
         { label: "PRÓXIMA EDICIÓN", type: "scroll", target: "siguiente_edicion" },
         { label: "PREGUNTAS", type: "scroll", target: "faq" },
-        { label: "VERSIÓN 1.1", type: "route", to: "/version-1.1" }
+        { label: "VERSIÓN 1.1", type: "route", to: "/v.1.1" }
     ];
 
     const scrollToSection = (e, sectionId) => {
@@ -111,7 +111,7 @@ function Home() {
                     el día <span className="text-neonGreen font-bold">29 de abril de 2026</span>.
                 </p>
 
-                <Link to="/version-1.1">
+                <Link to="/v.1.1">
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
