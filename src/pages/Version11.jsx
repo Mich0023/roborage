@@ -192,7 +192,7 @@ function Version11() {
                 </h2>
 
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed font-mono tracking-wide mb-6">
-                    La v.1.1 se llevará a cabo en el Instituto Tecnológico de Mérida, Campus Poniente, el 29 de abril de 2026. <br /><br />
+                    La v1.1 se llevará a cabo en el Instituto Tecnológico de Mérida, Campus Poniente, el 29 de abril de 2026. <br /><br />
                     Para esta versión presentamos nuevas modalidades dentro de las categorías RC, incluyendo Minisumo Máster y Batallas de Robots de 12 libras, ampliando las oportunidades de participación y elevando el nivel de desafío dentro del evento.
                 </p>
 
@@ -231,7 +231,7 @@ function Version11() {
                 <div className="w-full text-left mb-12">
                     <h2 className="text-2xl md:text-3xl font-road-rage text-neonGreen mb-6 tracking-widest">FECHA</h2>
                     <div className="text-center font-mono">
-                        <p className="text-gray-400 mb-4 text-sm tracking-widest">RoboRage v.1.1 te espera el:</p>
+                        <p className="text-gray-400 mb-4 text-sm tracking-widest">RoboRage v1.1 te espera el:</p>
                         <p className="text-3xl md:text-4xl font-bold text-neonGreen tracking-widest">29 DE ABRIL DE 2026</p>
                         <p className="text-lg md:text-xl font-bold text-white tracking-widest mt-2">8:00 AM - 8:00 PM</p>
                     </div>

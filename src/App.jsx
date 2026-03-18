@@ -10,7 +10,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/v.1.1" element={<Version11 />} />
+        <Route path="/v1.1" element={<Version11 />} />
       </Routes>
     </Router>
   );

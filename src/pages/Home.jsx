@@ -28,7 +28,7 @@ function Home() {
         { label: "ACERCA DE", type: "scroll", target: "about" },
         { label: "PRÓXIMA EDICIÓN", type: "scroll", target: "siguiente_edicion" },
         { label: "PREGUNTAS", type: "scroll", target: "faq" },
-        { label: "V.1.1", type: "route", to: "/v.1.1" }
+        { label: "V1.1", type: "route", to: "/v1.1" }
     ];
 
     const scrollToSection = (e, sectionId) => {
@@ -105,20 +105,20 @@ function Home() {
                 </h2>
 
                 <p className="text-gray-300 font-mono text-sm md:text-base leading-relaxed mb-10">
-                    La siguiente edición, la <span className="text-neonGreen font-bold">v.1.1</span>, 
+                    La siguiente edición, la <span className="text-neonGreen font-bold">v1.1</span>, 
                     se llevará a cabo en el 
                     <span className="text-neonGreen font-bold"> Instituto Tecnológico de Mérida, Campus Poniente</span>, 
                     el día <span className="text-neonGreen font-bold">29 de abril de 2026</span>.
                 </p>
 
-                <Link to="/v.1.1">
+                <Link to="/v1.1">
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="inline-block relative group overflow-hidden px-10 py-4 bg-neonGreen/10 text-neonGreen font-road-rage text-2xl tracking-widest shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_40px_rgba(204,255,0,0.8)] border-2 border-neonGreen transition-all duration-300 backdrop-blur-sm w-full md:w-auto text-center"
                     >
                         <span className="relative z-10 group-hover:text-black transition-colors duration-300 drop-shadow-md">
-                            IR A V.1.1
+                            IR A V1.1
                         </span>
 
                         <div className="absolute inset-0 bg-neonGreen transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
